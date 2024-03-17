@@ -2,7 +2,6 @@ package ro.cluj.products.controller;
 
 
 import java.util.List;
-import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

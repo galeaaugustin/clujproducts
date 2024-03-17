@@ -1,8 +1,6 @@
 package ro.cluj.products.service.impl;
 
-import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ro.cluj.products.dto.CategoryDto;
 import ro.cluj.products.entity.Category;
