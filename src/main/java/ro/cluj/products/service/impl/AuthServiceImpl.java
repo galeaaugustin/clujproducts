@@ -1,6 +1,8 @@
 package ro.cluj.products.service.impl;
 
 import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -26,6 +28,7 @@ import java.util.Set;
 @Service
 public class AuthServiceImpl implements AuthService {
 
+    private static Logger logger = LoggerFactory.getLogger(AuthServiceImpl.class);
     private UserRepository userRepository;
     private RoleRepository roleRepository;
     private PasswordEncoder passwordEncoder;
@@ -72,7 +75,7 @@ public class AuthServiceImpl implements AuthService {
         user.setRoles(roles);
 
         userRepository.save(user);
-
+        logger.info( "User Registered Successfully!.");
         return "User Registered Successfully!.";
     }
 

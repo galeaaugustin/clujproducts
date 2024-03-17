@@ -1,8 +1,9 @@
 package ro.cluj.products.service.impl;
 
-import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import ro.cluj.products.dto.ProductDto;
 import ro.cluj.products.exception.ResourceNotFoundException;
@@ -17,8 +18,9 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class ProductServiceImpl implements ProductService {
-
+    private static Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
     private ProductRepository productRepository;
     private CategoryRepository categoryRepository;
     private ModelMapper modelMapper;
@@ -33,11 +35,10 @@ public class ProductServiceImpl implements ProductService {
     public ProductDto addProduct(ProductDto productDto) {
         // convert ProductDto into Product Jpa entity using mapstruct
         var product = ProductMapper.MAPPER.fromProductDto(productDto);
-        /*
-        var category = categoryRepository.findById(product.getCategory().getId())
-                .orElseThrow(() -> new ResourceNotFoundException("Category not found with id : " + product.getCategory().getId()));
-        product.setCategory(category);
-        */
+        // added logger
+        logger.debug("Debug log message " + product.toString());
+        logger.info("Info log message " + product.toString());
+        logger.error("Error log message " + product.toString());
         // Product Jpa entity
         var savedProduct = productRepository.save(product);
         // Convert saved Product Jpa entity object into productDto object

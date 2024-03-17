@@ -1,15 +1,15 @@
 Create an API that acts as a store management tool
 
-- Create a Github profile if you don't have one -done
-- Use git in a verbose manner, push even if you wrote only one class -done
-- Create a Java, maven based project, Springboot for the web part -done
+- Create a Github profile if you don't have one -DONE
+- Use git in a verbose manner, push even if you wrote only one class -DONE
+- Create a Java, maven based project, Springboot for the web part -DONE
 - No front-end, you can focus on backend, no need to overcomplicate the structure
 - Implement basic functions, for example: add-product, find-product, change-price or others
 - Optional: Implement a basic authentication mechanism and role based endpoint access
-- Design error mechanism and handling plus logging
-- Write unit tests, at least for one class
-- Use Java 9+ features
-- Add a small Readme to document the project
+- Design error mechanism and handling plus logging 
+- Write unit tests, at least for one class - Work in progress
+- Use Java 9+ features -DONE 
+- Add a small Readme to document the project - DONE
 
 
 - SQL: please add the following records first
