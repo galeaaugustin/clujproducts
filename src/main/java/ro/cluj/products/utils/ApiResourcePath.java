@@ -3,7 +3,6 @@ package ro.cluj.products.utils;
 public class ApiResourcePath {
     private ApiResourcePath() {
     }
-
     public static final String PATH_SEPARATOR = "/";
     public static final String PATH_USER = "/user";
     public static final String PATH_PROCESS = "/product";
